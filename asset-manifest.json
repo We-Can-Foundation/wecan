@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/wecan/static/css/main.cd75127c.chunk.css",
+    "main.js": "/wecan/static/js/main.627ef3cf.chunk.js",
+    "main.js.map": "/wecan/static/js/main.627ef3cf.chunk.js.map",
+    "runtime-main.js": "/wecan/static/js/runtime-main.2757cdf9.js",
+    "runtime-main.js.map": "/wecan/static/js/runtime-main.2757cdf9.js.map",
+    "static/js/2.122165b5.chunk.js": "/wecan/static/js/2.122165b5.chunk.js",
+    "static/js/2.122165b5.chunk.js.map": "/wecan/static/js/2.122165b5.chunk.js.map",
+    "index.html": "/wecan/index.html",
+    "precache-manifest.f1a231a375a73273081fb566262d57ad.js": "/wecan/precache-manifest.f1a231a375a73273081fb566262d57ad.js",
+    "service-worker.js": "/wecan/service-worker.js",
+    "static/css/main.cd75127c.chunk.css.map": "/wecan/static/css/main.cd75127c.chunk.css.map",
+    "static/js/2.122165b5.chunk.js.LICENSE.txt": "/wecan/static/js/2.122165b5.chunk.js.LICENSE.txt",
+    "static/media/actIcon.png": "/wecan/static/media/actIcon.3a451ede.png",
+    "static/media/activitiesWeCan.png": "/wecan/static/media/activitiesWeCan.41f1530e.png",
+    "static/media/educationWeCan.png": "/wecan/static/media/educationWeCan.b4139630.png",
+    "static/media/psychologists.png": "/wecan/static/media/psychologists.d8d92718.png",
+    "static/media/therapyIcon.png": "/wecan/static/media/therapyIcon.33e15b12.png",
+    "static/media/weCanIntroImg.png": "/wecan/static/media/weCanIntroImg.29bb77e6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2757cdf9.js",
+    "static/js/2.122165b5.chunk.js",
+    "static/css/main.cd75127c.chunk.css",
+    "static/js/main.627ef3cf.chunk.js"
+  ]
+}
