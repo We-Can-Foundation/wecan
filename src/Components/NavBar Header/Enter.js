@@ -1,9 +1,12 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
-const Enter = () => {
+const Enter = (props) => {
     return (
         <div className={"pathContainer"}>
-            <h4>Iniciar sesión</h4>
+            <Link className={"noDec"} to={"/login"} onClick={() => props.openMenu(false)}>
+            	<h4>Iniciar sesión</h4>
+            </Link>
             <button type={"button"}>Registrarse</button>
         </div>
     );

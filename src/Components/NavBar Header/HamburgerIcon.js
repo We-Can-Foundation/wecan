@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment} from "react";
 
 const HamburgerIcon = (props) => {
     let className = "wrapper-menu"
@@ -7,13 +7,13 @@ const HamburgerIcon = (props) => {
     }
 
     return(
-        <div>
+        <Fragment>
             <div className={className} onClick={() => props.openMenu(!props.isOpen)}>
                 <div className="line-menu half start"></div>
                 <div className="line-menu"></div>
                 <div className="line-menu half end"></div>
             </div>
-        </div>
+        </Fragment>
 
     );
 }

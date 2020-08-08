@@ -4,6 +4,7 @@ import Header from "./Components/NavBar Header/Header";
 import Home from "./Components/Home/Home";
 import Education from "./Components/Eduaction/Education";
 import Activities from "./Components/Activities/Activities";
+import Login from "./Components/Login/Login";
 import './App.css';
 import {
     HashRouter as Router,
@@ -30,6 +31,10 @@ function App() {
                     <Route path="/therapy">
 
                     </Route>
+                    <Route path="/login">
+                        <Login/>
+                    </Route>
+
                 </div>
             </Switch>
         </Router>
