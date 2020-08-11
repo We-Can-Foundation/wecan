@@ -1,6 +1,5 @@
 import React from 'react';
 import useWindowSize from "./useWindowSize";
-import Header from "./Components/NavBar Header/Header";
 import Home from "./Components/Home/Home";
 import Education from "./Components/Eduaction/Education";
 import Activities from "./Components/Activities/Activities";
@@ -16,17 +15,16 @@ function App() {
 
     return (
         <Router>
-            <Header windowSize={useWindowSize()}/>
             <Switch>
                 <div className={"container"}>
                     <Route path="/" exact component={Home}>
                         <Home windowSize={useWindowSize()}/>
                     </Route>
                     <Route path="/education">
-                        <Education/>
+                        <Education windowSize={useWindowSize()}/>
                     </Route>
                     <Route path="/activities">
-                        <Activities/>
+                        <Activities windowSize={useWindowSize()}/>
                     </Route>
                     <Route path="/therapy">
 
