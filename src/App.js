@@ -10,6 +10,7 @@ import {
     Switch,
     Route
 } from "react-router-dom";
+import Header from "./Components/NavBar Header/Header";
 
 function App() {
 
@@ -27,7 +28,7 @@ function App() {
                         <Activities windowSize={useWindowSize()}/>
                     </Route>
                     <Route path="/therapy">
-
+                        <Header windowSize={useWindowSize()}/>
                     </Route>
                     <Route path="/login">
                         <Login/>

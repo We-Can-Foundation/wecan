@@ -5,12 +5,11 @@ const Login = () => {
         
         <div className={"loginCont"}>
 	        <div className={"resCont"}>
-
 				<div className={"resCard"}>
 	        		<h1>Bienvenido</h1>
 	        		<p>Inicia sesión para sacar el maximo provecho a la plataforma</p><br/>
 	        		<h2>LOGIN</h2>
-	        		<form action="" metohd="GET">
+	        		<form action="" method="GET">
 		        		<input type="text" name="usuario" placeholder="Usuario" className={"resIn"}/>
 		        		<br/><br/>
 		        		<input type="password" name="contraseña" placeholder="Contraseña" className={"resIn"}/><br/><br/>
