@@ -1,9 +1,17 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 const Login = () => {
+ 	
+ 	const navigate = useHistory();
     return (
         
         <div className={"loginCont"}>
+
+	        <div className={"resButton"}>
+				<button id="back" onClick={() => navigate.goBack()}>Regresar</button>
+			</div>
+
 	        <div className={"resCont"}>
 				<div className={"resCard"}>
 	        		<h1>Bienvenido</h1>
@@ -13,19 +21,14 @@ const Login = () => {
 		        		<input type="text" name="usuario" placeholder="Usuario" className={"resIn"}/>
 		        		<br/><br/>
 		        		<input type="password" name="contraseña" placeholder="Contraseña" className={"resIn"}/><br/><br/>
-		        		<input type="checkbox" name="recuerda" value="forever"/>Recordar inicio de sesion<br/><br/>
+		        		<input type="checkbox" name="recuerda" value="forever"/>Recordar inicio de sesión<br/><br/>
 		        		<button type="submit" name="login" value="Iniciar">Iniciar Sesión</button>
 		        	</form>
-	        	</div>	        
+	        	</div>	
 	        </div>
-
-	        <div className={"imgCont"}>
-	            <div className={"imgCard"}>
-	            	<img alt={"We Can Logo"} src={require('../../Assets/activitiesWeCan.png')}/>
-	        	</div>
-	        </div>
+	        
 	    </div>
-	    
+
     );
 }
 

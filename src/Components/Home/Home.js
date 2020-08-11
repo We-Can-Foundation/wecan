@@ -6,7 +6,7 @@ const Home = (props) => {
         <div>
             <Header windowSize={props.windowSize}/>
             <div className={"homeCont"}>
-
+            	<h3>Home</h3>
             </div>
         </div>
     );

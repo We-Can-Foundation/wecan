@@ -193,7 +193,7 @@ header h3{
 .homeCont{
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-evenly;
 }
 
@@ -207,7 +207,7 @@ header h3{
   width: 40%;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-evenly;
   padding: 50px 5%;
 }
@@ -355,7 +355,7 @@ header h3{
   padding: 5%;
   display: flex;
   flex-direction: row;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
 }
 .psychDataCont img{
@@ -367,7 +367,7 @@ header h3{
   height: 40vh;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
 }
 .psychInfo h3{
@@ -453,7 +453,7 @@ footer{
 .additionalInfo{
   display: flex;
   flex-direction: column;
-  align-content: start;
+  align-content: flex-start;
   justify-content: space-evenly;
 }
 .additionalInfo a{
@@ -498,7 +498,7 @@ footer{
   display: flex;
   flex-direction: row;
   align-content: center;
-  justify-content: start;
+  justify-content: flex-start;
   margin: 10px;
   padding: 5px;
   overflow: auto;
@@ -551,19 +551,34 @@ footer{
 
 .loginCont{
   display: flex;
-  flex-direction: row;
-  height: 93vh;
-  background: linear-gradient(135deg, #A2D3E9, #0F7294); 
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(135deg, #A2D3E9, #0F7294);
+  
+}
+
+.resButton{
+  display: flex;
+  padding: 20px 20px;
+}
+
+.resButton button{
+  border: none;
+  border-radius: 30px;
+  padding: 6px 10px;
+  background-color: #656668;
+  color: white;
+  font-size: 1.1em;
+  transition: 250ms;
 }
 
 .resCont{
   display: flex;
-  width: 50%;
-  height: 100%;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   text-align:center;
-  padding: 12px 10px;
+  padding: 10px 10px;
 }
 
 .resCard{
@@ -614,30 +629,13 @@ footer{
   font-weight: bold;
 }
 
-.imgCont{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  height: 100%;
-  flex-direction: row;
-}
-
-.imgCard{
-  display: flex;
-  width: 85%;
-  height: 85%;
-  background-color: #97CEDD;
-  border-radius: 40px 0 0 40px;
-}
-
 /*__________________________________________MOBILE___________________________________________________*/
 
 @media only screen and (max-width: 1025px) {
   .pathContainer{
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-evenly;
   }
   .pathContainer{
@@ -692,7 +690,7 @@ footer{
   .patientDataCont{
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
     width: 90%;
     height: 70vh;
@@ -716,7 +714,7 @@ footer{
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
   }
   .messageCont{
@@ -766,19 +764,6 @@ footer{
     width: 300px;
     margin: 5px 0;
   }
-  .resCont{
-    width: 93%;
-    height: 100%;
-    text-align:center;
-    padding: 12px 10px;
-  }
-  .imgCont{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 7%;
-    height: 100%;
-    flex-direction: row;
-  }
+
 }
 
