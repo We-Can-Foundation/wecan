@@ -1,10 +1,7 @@
 import React from "react";
-import Header from "../NavBar Header/Header";
 
-const Education = (props) => {
+const Education = () => {
     return (
-        <div>
-            <Header windowSize={props.windowSize}/>
             <div className={"education"}>
                 <div className={"topArea"}>
                     <h2>Educación</h2>
@@ -49,7 +46,6 @@ const Education = (props) => {
                     </div>
                 </div>
             </div>
-        </div>
     );
 }
 

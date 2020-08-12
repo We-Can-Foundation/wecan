@@ -8,7 +8,7 @@ const SocialIcons = () => {
     library.add(fab);
     return (
         <div className={"socialColumn"}>
-            <h4>Síguenos en redes sociales:</h4>
+            <h4>Síguenos en redes:</h4>
             <div className={"socialMediaList"}>
                 <a target={"blank"} href={"https://www.instagram.com/wecanfoundationmx/"}>
                     <FontAwesomeIcon className={"icon"} icon={['fab', 'instagram']} color={"#486779"} size={"3x"}/></a>

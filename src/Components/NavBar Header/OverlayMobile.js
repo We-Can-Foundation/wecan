@@ -17,11 +17,10 @@ const OverlayMobile = (props) => {
             <div className="overlay-content1 ">
                 <Enter openMenu={props.openMenu}/>
                 <MenuList openMenu={props.openMenu}/>
-                <br/>
-                <br/>
-                <br/>
-                <SocialIcons/>
-                <AdditionalInfo/>
+                <div>
+                    <SocialIcons/>
+                    <AdditionalInfo/>
+                </div>
             </div>
             <div className="overlay-content2">{""}</div>
         </div>

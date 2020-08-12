@@ -1,10 +1,8 @@
 import React from "react";
-import Header from "../NavBar Header/Header";
 
-const Activities = (props) => {
+const Activities = () => {
     return (
         <div>
-            <Header windowSize={props.windowSize}/>
             <h3>Actividades</h3>
         </div>
     );

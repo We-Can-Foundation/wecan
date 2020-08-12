@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import useWindowSize from "./useWindowSize";
 import Home from "./Components/Home/Home";
 import Education from "./Components/Eduaction/Education";
@@ -13,11 +13,11 @@ import {
 import Header from "./Components/NavBar Header/Header";
 
 function App() {
-
+    const [pageIndex, setIndex] = useState(0);
     return (
         <Router>
+            <Header  windowSize={useWindowSize()}/>
             <Switch>
-                <div className={"container"}>
                     <Route path="/" exact component={Home}>
                         <Home windowSize={useWindowSize()}/>
                     </Route>
@@ -28,13 +28,11 @@ function App() {
                         <Activities windowSize={useWindowSize()}/>
                     </Route>
                     <Route path="/therapy">
-                        <Header windowSize={useWindowSize()}/>
+
                     </Route>
                     <Route path="/login">
                         <Login/>
                     </Route>
-
-                </div>
             </Switch>
         </Router>
     );
