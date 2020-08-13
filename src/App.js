@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import useWindowSize from "./useWindowSize";
 import Home from "./Components/Home/Home";
 import Education from "./Components/Eduaction/Education";
@@ -11,19 +11,21 @@ import {
     Route
 } from "react-router-dom";
 import Header from "./Components/NavBar Header/Header";
+import usePersistedState from "./usePersistedState";
 
 function App() {
-    const [pageIndex, setIndex] = useState(0);
+    const [pageIndex, setIndex] = usePersistedState(0);
+    const [eduCategory, setEduCategory] = usePersistedState(0);
     return (
         <Router>
             <div className={"sectionCont"}>
-                <Header  windowSize={useWindowSize()}/>
+                <Header index={pageIndex} setIndex={setIndex}  windowSize={useWindowSize()}/>
                 <Switch>
                     <Route path="/" exact component={Home}>
                         <Home windowSize={useWindowSize()}/>
                     </Route>
                     <Route path="/education">
-                        <Education windowSize={useWindowSize()}/>
+                        <Education category={eduCategory} setCategory={setEduCategory} windowSize={useWindowSize()}/>
                     </Route>
                     <Route path="/activities">
                         <Activities windowSize={useWindowSize()}/>

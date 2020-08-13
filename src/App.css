@@ -481,7 +481,7 @@ footer{
   flex-direction: column;
   justify-content: space-between;
   align-content: start;
-  height: 23%;
+  height: 20%;
 }
 
 .topArea h2{
@@ -545,8 +545,12 @@ footer{
   justify-content: start;
   overflow-y: auto;
   overflow-x: hidden;
-  height: 68%;
-  background-color: #f8f8f8;
+  height: 70%;
+  background-color: #f6f6f6;
+}
+
+.contentBox h2{
+  margin: 10px;
 }
 
 .news{
@@ -582,7 +586,7 @@ footer{
   box-shadow: -3px 3px 6px rgba(0,0,0,0.1);
   border-radius: 15px;
   transition: 300ms;
-  margin: 30px;
+  margin: 25px;
 }
 
 .blogCard img{
@@ -603,6 +607,21 @@ footer{
   font-size: 15px;
   background-color: #0582a1;
   color: white;
+  outline: none;
+  box-shadow: -3px 3px 6px rgba(0,0,0,0);
+  transition: 300ms;
+}
+
+.searchBtn:hover{
+  background-color: #1d8ca8;
+  box-shadow: -3px 3px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.searchBtn:active{
+  background-color: #34afce;
+  box-shadow: none;
+  cursor: auto;
 }
 
 .search{
@@ -620,6 +639,11 @@ footer{
 .filt img{
   width: 25px;
   margin-right: 10px;
+}
+
+.filt img:hover{
+  transform: translateY(-1px);
+  cursor: pointer;
 }
 
 .resumenBlog{
@@ -649,10 +673,17 @@ footer{
 }
 
 .readMoreBtn:hover{
-  box-shadow: -3px 3px 6px rgba(0,0,0,0.3);
-  transform: translateY(1px);
+  background-color: #ff962d;
+  box-shadow: -3px 3px 6px rgba(0,0,0,0.2);
   cursor: pointer;
 }
+
+.readMoreBtn:active{
+  background-color: #e37b14;
+  box-shadow: none;
+  cursor: auto;
+}
+
 
 /*_______________________________________ACTIVITIES__________________________________________*/
 

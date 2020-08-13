@@ -10,7 +10,7 @@ const Header = (props) => {
     let content =(
         <Fragment>
             <Logo/>
-            <MenuList openMenu={openMenu}/>
+            <MenuList index={props.index} setIndex={props.setIndex} openMenu={openMenu}/>
             <Enter openMenu={openMenu}/>
         </Fragment>
     );

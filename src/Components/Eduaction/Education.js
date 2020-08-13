@@ -1,9 +1,41 @@
 import React from "react";
+import useWindowSize from "../../useWindowSize";
+import usePersistedState from "../../usePersistedState";
 
-const Education = () => {
+const Education = (props) => {
+
+    let height = useWindowSize().height;
+    let width = useWindowSize().width;
+    let topAreaStyle = {height: "24%"}
+    let contentBoxStyle = {height: "67%"}
+    let contentTitle = "";
+
+    switch (props.category) {
+        case 0:
+            contentTitle = <h2 style={{color: '#5681BF'}}>Noticias</h2>;
+            break;
+        case 1:
+            contentTitle = <h2 style={{color: '#CB4242'}}>Blogs</h2>;
+            break;
+        case 2:
+            contentTitle = <h2 style={{color: '#E17B12'}}>Recomendaciones</h2>;
+            break;
+        default:
+            contentTitle = "";
+            break;
+    }
+
+    if(height < 750 && width < 500){
+        topAreaStyle.height = "30%";
+        contentBoxStyle.height = "60%";
+    } else if( height < 800 && height > 700) {
+        topAreaStyle.height = "20%";
+        contentBoxStyle.height = "70%";
+    }
+
     return (
             <div className={"education"}>
-                <div className={"topArea"}>
+                <div style={topAreaStyle} className={"topArea"}>
                     <div className={"firstRowCont"}>
                         <div className={"filt"}>
                             <h2>Educación</h2>
@@ -16,21 +48,22 @@ const Education = () => {
                         </div>
                     </div>
                     <div className={"categoryCont"}>
-                        <div className={"categoryBox news"}>
+                        <div onClick={() => props.setCategory(0)} className={"categoryBox news"}>
                             <img alt={"Category Icon"} src={require('../../Assets/news.png')}/>
                             <h4>Noticias</h4>
                         </div>
-                        <div className={"categoryBox blogCat"}>
+                        <div onClick={() => props.setCategory(1)} className={"categoryBox blogCat"}>
                             <img alt={"Category Icon"} src={require('../../Assets/blogs.png')}/>
                             <h4>Blogs</h4>
                         </div>
-                        <div className={"categoryBox tips"}>
+                        <div onClick={() => props.setCategory(2)} className={"categoryBox tips"}>
                             <img alt={"Category Icon"} src={require('../../Assets/tips.png')}/>
                             <h4>Recomendaciones</h4>
                         </div>
                     </div>
                 </div>
-                <div className={"contentBox"}>
+                <div style={contentBoxStyle} className={"contentBox"}>
+                    {contentTitle}
                     <div className={"blogCard"}>
                         <img alt={"Blog"} src={require('../../Assets/blogImg.png')} />
                         <div className={"resumenBlog"}>
