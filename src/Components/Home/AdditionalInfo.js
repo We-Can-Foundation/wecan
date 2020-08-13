@@ -1,6 +1,8 @@
 import React from "react";
 
 const AdditionalInfo = () => {
+    let date = new Date();
+    let year = date.getFullYear();
     return(
         <div className={"additionalInfo"}>
             <h4>Información adicional</h4>
@@ -9,6 +11,7 @@ const AdditionalInfo = () => {
             <a href={"/#"}>Legal</a>
             <a href={"/#"}>Soporte</a>
             <a href={"/#"}>Conócenos</a>
+            <p className={"copyRight"}>&copy; We Can Foundation {year}</p>
         </div>
     );
 }

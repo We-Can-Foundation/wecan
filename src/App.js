@@ -16,8 +16,9 @@ function App() {
     const [pageIndex, setIndex] = useState(0);
     return (
         <Router>
-            <Header  windowSize={useWindowSize()}/>
-            <Switch>
+            <div className={"sectionCont"}>
+                <Header  windowSize={useWindowSize()}/>
+                <Switch>
                     <Route path="/" exact component={Home}>
                         <Home windowSize={useWindowSize()}/>
                     </Route>
@@ -33,7 +34,8 @@ function App() {
                     <Route path="/login">
                         <Login/>
                     </Route>
-            </Switch>
+                </Switch>
+            </div>
         </Router>
     );
 }
