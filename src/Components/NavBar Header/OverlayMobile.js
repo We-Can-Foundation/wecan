@@ -16,7 +16,7 @@ const OverlayMobile = (props) => {
         <div id="myNav" className="overlay" style={divStyle}>
             <div className="overlay-content1 ">
                 <Enter openMenu={props.openMenu}/>
-                <MenuList openMenu={props.openMenu}/>
+                <MenuList index={props.index} setIndex={props.setIndex} openMenu={props.openMenu}/>
                 <div>
                     <SocialIcons/>
                     <AdditionalInfo/>

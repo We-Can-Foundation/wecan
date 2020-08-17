@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
 import useWindowSize from "../../useWindowSize";
-import usePersistedState from "../../usePersistedState";
 
 const Education = (props) => {
+
+    useEffect(() => {
+        props.setIndex(1);
+    });
 
     let height = useWindowSize().height;
     let width = useWindowSize().width;

@@ -4,6 +4,7 @@ import MenuList from "./MenuList";
 import Enter from "./Enter";
 import HamburgerIcon from "./HamburgerIcon";
 import OverlayMobile from "./OverlayMobile";
+import {Link} from "react-router-dom";
 
 const Header = (props) => {
     const [isOpen, openMenu] = useState(false);
@@ -26,7 +27,7 @@ const Header = (props) => {
 
     return(
         <header>
-            <OverlayMobile isOpen={isOpen} openMenu={openMenu}/>
+            <OverlayMobile index={props.index} setIndex={props.setIndex} isOpen={isOpen} openMenu={openMenu}/>
             {content}
         </header>
     );

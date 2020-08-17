@@ -1,6 +1,12 @@
-import React from "react";
+import React, {useEffect} from "react";
+import useWindowSize from "../../useWindowSize";
 
-const Activities = () => {
+const Activities = (props) => {
+
+    useEffect(() => {
+        props.setIndex(2);
+    });
+
     return (
         <div className={"activities"}>
             <div className={"topArea"}>

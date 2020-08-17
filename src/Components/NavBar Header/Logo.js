@@ -1,11 +1,14 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 const Logo = () => {
     return(
-        <div className={"headerCont Logo"}>
-            <img alt={"We Can Logo"} src={require('../../Assets/LogoWeCan.png')}/>
-            <h3>WeCan</h3>
-        </div>
+        <Link className={"noDec"} to={"/"}>
+            <div className={"headerCont Logo"}>
+                <img className={"LogoImg"} alt={"We Can Logo"} src={require('../../Assets/LogoWeCan.png')}/>
+                <h3 className={"noDec"}>WeCan</h3>
+            </div>
+        </Link>
     );
 }
 

@@ -10,3 +10,4 @@ export default function usePersistedState(key, defaultValue) {
     }, [state, key]);
     return [state, setState];
 }
+

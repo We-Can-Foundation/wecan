@@ -1,10 +1,32 @@
-import React from "react";
+import React, {useEffect} from "react";
 
-const Home = () => {
+const Home = (props) => {
+    let name = "name"
+    useEffect(() => {
+        props.setIndex(0);
+    });
+    let topAreaStyle = {height: "10%"}
+
     return (
-        <div>
-            <div className={"homeCont"}>
-            	<h3>Home</h3>
+        <div className={"homeCont"}>
+            <div style={topAreaStyle} className={"topArea"}>
+                <div className={"firstRowCont"}>
+                    <h2 style={{width: "400px"}}>Buen día, {name}</h2>
+                    <div className={"search"}>
+                        <button className={"searchBtn"} type={"button"}>Buscar</button>
+                        <input type="text" id="search" name="searchbar" placeholder={"Buscar"}/>
+                    </div>
+                </div>
+            </div>
+            <div className={"homeContent"}>
+                <div className={"homeColumnBox"}>
+                    <div className={"homeColumn"}>
+
+                    </div>
+                    <div className={"homeColumn"}>
+
+                    </div>
+                </div>
             </div>
         </div>
     );

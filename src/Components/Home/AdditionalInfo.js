@@ -10,7 +10,6 @@ const AdditionalInfo = () => {
             <a href={"/#"}>Términos y condiciones</a>
             <a href={"/#"}>Legal</a>
             <a href={"/#"}>Soporte</a>
-            <a href={"/#"}>Conócenos</a>
             <p className={"copyRight"}>&copy; We Can Foundation {year}</p>
         </div>
     );
