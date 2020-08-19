@@ -157,7 +157,7 @@ header h3{
 .overlay {
   height: 100%;
   width: 100%;
-  position: absolute; /*Solucion por ahora Safari pantallas chicas. Lo mejor seria separar el scroll del menu y de la pagina*/
+  position: fixed; /*Funciona mejor fixed tanto en Chrome como en Safari*/
   top: 0;
   left: 0;
   bottom: 0;
@@ -167,7 +167,7 @@ header h3{
   z-index: 6;
 }
 .overlay-content1 {
-  min-height: 600px;
+  min-height: 600px; /*Solucion por ahora Safari pantallas chicas. Lo mejor seria separar el scroll del menu y de la pagina*/
   width: 60%;
   height: 100%;
   background-color: #F7FBFF;
