@@ -7,7 +7,10 @@ const Enter = (props) => {
             <Link className={"noDec"} to={"/login"} onClick={() => props.openMenu(false)}>
             	<h4>Iniciar sesión</h4>
             </Link>
-            <button type={"button"}>Registrarse</button>
+            <Link className={"noDec"} to={"/register"} onClick={() => props.openMenu(false)}>
+                <button type={"button"}>Registrarse</button>
+            </Link>
+
         </div>
     );
 }

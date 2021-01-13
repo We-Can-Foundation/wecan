@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import Logo from "../NavBar Header/Logo";
 import useWindowSize from "../../useWindowSize";
 
@@ -7,7 +7,7 @@ const Login = () => {
 
 	let imageBox = (
 		<div className={"resImgBox"}>
-			<img alt={"LogIn"} />
+			<img alt={"LogIn"} src={require('../../Assets/logIn_img.png')}/>
 		</div>
 	)
 
@@ -34,6 +34,18 @@ const Login = () => {
 		        		<input className={"roundCBox"} type="checkbox" name="recuerda" value="forever"/><span>Recordar inicio de sesión</span><br/><br/>
 		        		<button type="submit" name="login" value="Iniciar">Iniciar Sesión</button>
 		        	</form>
+					<p>ó inicia con tus cuentas personales</p>
+					<div className={"logInIconsCont"}>
+						<img alt={"google"} src={require('../../Assets/google_icon.png')}/>
+						<img alt={"google"} src={require('../../Assets/facebook_icon.png')}/>
+						<img alt={"google"} src={require('../../Assets/apple_icon.png')}/>
+					</div>
+					<div className={"logMsgCont"}>
+						<p>¿Aún no tienes cuenta we can?</p>
+						<Link className={"noDec"} to={"/register"}>
+							<p id={"logRegChange"}>Regístrate</p>
+						</Link>
+					</div>
 	        	</div>
 				{imageBox}
 	        </div>

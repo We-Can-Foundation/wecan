@@ -12,6 +12,8 @@ import {
 } from "react-router-dom";
 import Header from "./Components/NavBar Header/Header";
 import usePersistedState from "./usePersistedState";
+import Therapy from "./Components/Therapy/Therapy";
+import Register from "./Components/Login/Register";
 
 function App() {
     const [pageIndex, setIndex] = usePersistedState(0);
@@ -31,10 +33,13 @@ function App() {
                         <Activities setIndex={setIndex} windowSize={useWindowSize()}/>
                     </Route>
                     <Route path="/therapy">
-
+                        <Therapy setIndex={setIndex} windowSize={useWindowSize()}/>
                     </Route>
                     <Route path="/login">
                         <Login/>
+                    </Route>
+                    <Route path="/register">
+                        <Register/>
                     </Route>
                 </Switch>
             </div>
