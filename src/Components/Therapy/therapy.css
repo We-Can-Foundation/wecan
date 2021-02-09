@@ -1,0 +1,48 @@
+.therapy{
+    height: 90%;
+}
+
+.noTherapyCont{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.noTherapyCont h2{
+    color: #4B718F;
+}
+.noTherapyCont img{
+    height: 65%;
+}
+.noTherapyCont p{
+    color: #9f9f9f;
+    size: 14px;
+}
+
+.startTherapyBtn{
+    margin: 0 15px 20px 15px;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    background-color: #FF6496;
+    color: white;
+    font-size: 1em;
+    transition: 250ms;
+    outline: none;
+}
+.startTherapyBtn:hover{
+    cursor: pointer;
+    box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 1025px){
+    .noTherapyCont h2{
+        text-align: center;
+    }
+    .noTherapyCont img{
+        width: 80%;
+        height: auto;
+    }
+}

@@ -1,12 +1,31 @@
-import React, {useState}from 'react';
-import { useHistory } from 'react-router-dom';
+import React, {useState, useReducer, createContext}from 'react';
+import {
+    Link,
+    useHistory,
+    Switch,
+    Route,
+    useRouteMatch,
+    useLocation
+} from 'react-router-dom';
 import Logo from "../NavBar Header/Logo";
 import useWindowSize from "../../useWindowSize";
 import './register.css';
+import './RegisterPatient';
+import RegisterPatient from "./RegisterPatient";
+import RegistrationStepOne from "./RegistrationStepOne";
 
 const Register = () => {
 
+    const [newUser, setuserdata] = useState({
+        name: undefined,
+        surname: undefined,
+        email: undefined
+    })
+
+    let match = useRouteMatch();
     const [selection, setSelection] = useState(0);
+    let destination = "/paciente";
+    let location = useLocation();
 
     const patientStyle = {
         backgroundColor: "#EE5555",
@@ -19,20 +38,22 @@ const Register = () => {
     }
 
     if(selection === 0){
-        patientStyle.backgroundColor = "#EE5555"
-        patientStyle.color = "#fff"
-        proStyle.backgroundColor = ""
-        proStyle.color = "#9d9d9d"
+        patientStyle.backgroundColor = "#EE5555";
+        patientStyle.color = "#fff";
+        proStyle.backgroundColor = "";
+        proStyle.color = "#9d9d9d";
+        destination = `${match.url}/paciente`;
     } else if(selection === 1){
-        proStyle.backgroundColor = "#6078FE"
-        proStyle.color = "#fff"
-        patientStyle.backgroundColor = ""
-        patientStyle.color = "#9d9d9d"
+        proStyle.backgroundColor = "#6078FE";
+        proStyle.color = "#fff";
+        patientStyle.backgroundColor = "";
+        patientStyle.color = "#9d9d9d";
+        destination = `${match.url}/profesionista`;
     }
 
     let imageBox = (
         <div className={"resImgBox"}>
-            <img alt={"Registro"} />
+            <img alt={"LogIn"} src={require('../../Assets/logIn_img.png')}/>
         </div>
     )
 
@@ -41,33 +62,37 @@ const Register = () => {
     }
 
     const navigate = useHistory();
-    return (
 
-        <div className={"loginCont"}>
-            <div className={"topBar"}>
-                <Logo/>
-                <button className={"resButton"} id="back" onClick={() => navigate.goBack()}>Regresar</button>
-            </div>
-            <div className={"resCont"}>
-                <div className={"regCont"}>
-                    <h2>Registrarse</h2>
-                    <div className={"regCard"}>
-                        <div className={"userTypeBar"}>
-                            <div id={"patientSelection"} style={patientStyle} onClick={() => setSelection(0)}>
-                                <p>Soy Paciente</p>
-                            </div>
-                            <div id={"professionalSelection"} style={proStyle} onClick={() => setSelection(1)}>
-                                <p>Soy profesionista</p>
-                            </div>
-                        </div>
-                        <input type="text" name="name" placeholder="Nombre" className={"regInp"}/>
-                        <input type="text" name="middleName" placeholder="Apellidos" className={"regInp"}/>
-                        <input type="email" name="mail" placeholder="Correo electrónico" className={"regInp"}/>
+    const FirstStep = <RegistrationStepOne
+        destination={destination}
+        patientStyle={patientStyle}
+        proStyle={proStyle}
+        setSelection={setSelection}
+        location={location}
+        newUser={newUser}/>;
+
+    return (
+        <Switch>
+            <div className={"loginCont"}>
+                    <div className={"topBar"}>
+                        <Logo/>
+                        <button className={"resButton"} id="back" onClick={() => navigate.goBack()}>Regresar</button>
                     </div>
-                </div>
-                {imageBox}
+                    <div className={"resCont"}>
+                        <div className={"regCont"}>
+                            <h2>Registrarse</h2>
+
+                                {FirstStep}
+                                <Route path={`${match.url}/paciente`}>
+                                    <RegisterPatient newUser={newUser}/>
+                                </Route>
+                                <Route path={`${match.url}/profesionista`}>
+                                </Route>
+                        </div>
+                        {imageBox}
+                    </div>
             </div>
-        </div>
+        </Switch>
 
     );
 }

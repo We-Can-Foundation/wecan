@@ -1,0 +1,89 @@
+.blogCont{
+    top: 0;
+    left: 0;
+    position: absolute;
+    min-height: 639px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #FCFCFC;
+    height: 100%;
+    width: 100%;
+    z-index: 6;
+    overflow-y: auto;
+}
+
+.blogCont header{
+    width: 90%;
+    height: 10%;
+    padding: 2% 5%;
+    background-color: transparent;
+    box-shadow: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.blogCont h1{
+    align-self: center;
+    color: #4b718f;
+}
+
+.blogCont p{
+    padding: 0 25%;
+    text-align: justify;
+    color: #7c7c7c;
+}
+
+.blogCont img{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+.secondTopBar{
+    padding: 3% 10%;
+    color: #9d9d9d;
+}
+
+.blogCopy{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #c3c3c3;
+    font-size: 14px;
+}
+
+.backFromBlog{
+    padding: 10px 30px;
+    background-color: #93baca;
+    font-size: 15px;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    transition: 250ms;
+    outline: none;
+}
+.backFromBlog:hover{
+    box-shadow: -2px 2px 10px rgba(0,0,0,0.25);
+    cursor: pointer;
+}
+.backFromBlog:focus{
+    cursor: auto;
+    background-color: #75a1b3;
+}
+
+
+@media only screen and (max-width: 1025px){
+    .blogCont h1{
+        padding: 5%;
+        font-size: 25px;
+    }
+    .blogCont p{
+        padding: 0 10%;
+    }
+    .blogCont img{
+        width: 80%;
+    }
+}
